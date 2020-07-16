@@ -406,6 +406,7 @@ function getLanguages() {
 
 	if ($numrows) {
 		while ($row = mysql_fetch_array($result)) {
+			echo $row;
 			$data[] = $row;
 		}
 	}

@@ -3,10 +3,11 @@ $lifetime=60*60*24*30; // 30 days
 ini_set('session.cookie_lifetime', $lifetime);
 ini_set('session.gc_maxlifetime', $lifetime);
 session_start();
-//ini_set('display_errors', 1);
-//error_reporting(~0);
+ini_set('display_errors', 1);
+// error_reporting(~0);
 error_reporting(0);
 
+require_once('mysql-wrapper.extend.php');
 require_once('mainconfig.php');
 $config['realtime_refreshrate'] = 10000; // in milliseconds
 $config['sale_tax'] = 0; // percent
